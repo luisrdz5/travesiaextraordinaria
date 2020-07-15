@@ -1,0 +1,12 @@
+{
+  "development": {
+    "apiUrl": "https://travesiaextraordinaria.herokuapp.com",
+    "contentApiKey": "8c1526a8970b5fd01571425486",
+    "version": "v3"
+  },
+  "production": {
+    "apiUrl": "https://travesiaextraordinaria.herokuapp.com",
+    "contentApiKey": "8c1526a8970b5fd01571425486",
+    "version": "v3"
+  }
+}
