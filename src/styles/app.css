@@ -1,9 +1,12 @@
 /* App.css
 /* ---------------------------------------------------------- /*
+
 These are just some base styles to get you started. You delete
 these and start over using your toolset of choice, or evolve
 what's here to work the way you'd like it to.
+
 # Table of Contents
+
 - Vars
 - Reset
 - Defaults
@@ -12,6 +15,7 @@ what's here to work the way you'd like it to.
 - Author Archives
 - Pagination
 - Footer
+
 /* Variables
 /* ---------------------------------------------------------- */
 
@@ -305,7 +309,6 @@ html {
 body {
     overflow-x: hidden;
     color: #3c484e;
-    background-color: #0d1219;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 1.5rem;
@@ -314,6 +317,8 @@ body {
     font-style: normal;
     letter-spacing: 0;
     text-rendering: optimizeLegibility;
+    background: #fff;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: "liga" on;
@@ -453,7 +458,7 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    color: white;
+    color: var(--color-base);
     line-height: 1.15;
     font-weight: 700;
     text-rendering: optimizeLegibility;
@@ -529,7 +534,6 @@ h6 {
     margin: 0 auto;
     font-size: 2rem;
     line-height: 1.7em;
-    color: white;
 }
 
 .content-body {
@@ -539,91 +543,16 @@ h6 {
 }
 
 .post-full-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 2em;
-    grid-row-gap: 0.5em;
+    max-width: 720px;
     margin: 0 auto;
-}
-
-@media (max-width: 680px) {
-    .post-full-content {
-        grid-template-columns: 1fr;
-    }
-}
-
-.post-disqus {
-    border-top: 1px solid var(--color-secondary);
-}
-
-#disqus_thread {
-    margin: 1em 0 0 0;
+    background: #fff;
 }
 
 .post-feature-image img {
     margin: 0 0 3vw;
     width: 100%;
-    height: 100%;
+    height: 500px;
     object-fit: cover;
-}
-
-.post-author-profile {
-    font-size: 16px;
-}
-
-.post-author-profile h2 {
-    font-size: 16px;
-}
-
-.post-author-profile a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: normal;
-    margin: 0 0 0 12px;
-}
-.post-date {
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    font-weight: 300;
-    text-align: right;
-}
-
-.post-tags a {
-    font-size: 13px;
-    color: var(--color-secondary);
-    margin: 0 0.4em 0 0;
-}
-
-.post-coffee {
-    margin: 0 0 1em 0;
-}
-
-.post-coffee img {
-    height: 51px !important;
-    width: 217px !important;
-    border-radius: 6px;
-}
-
-.post-follow {
-    border-radius: 5px;
-    color: white;
-    padding: 5px;
-    background-color: #1b95e0;
-    display: inline-block;
-    margin: 1em 0;
-}
-.post-follow a {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    margin: 0 0.5em 0 0;
-}
-
-.post-follow img {
-    margin: 2px 0.5em 0 0.5em;
 }
 
 .content-body h1,
@@ -724,7 +653,7 @@ h6 {
     line-height: 1.4em;
     white-space: pre-wrap;
     padding: 20px;
-    background: #1c2938;
+    background: var(--color-base);
     color: #fff;
     border-radius: 12px;
 }
@@ -736,6 +665,7 @@ h6 {
     padding-top: 20px;
     padding-bottom: 20px;
     color: #fff;
+    background: var(--color-base);
     background-position: center;
     background-size: cover;
 }
@@ -745,12 +675,6 @@ h6 {
     padding: 5px 10px;
     color: #fff;
     opacity: 0.7;
-}
-
-@media (max-width: 680px) {
-    .site-nav-item:nth-last-child(2n) {
-        display: none;
-    }
 }
 
 .site-nav-item:hover {
@@ -764,36 +688,7 @@ h6 {
 }
 
 .site-logo {
-    height: 45px;
-}
-
-.site-header-top {
-    display: flex;
-}
-
-.site-header-top h1 {
-    font-size: 22px;
-    margin: 0;
-}
-
-.site-mast-left a {
-    text-decoration: none;
-}
-
-.site-header-top p {
-    font-size: 16px;
-    margin: 0;
-    color: white;
-}
-
-.site-header-link {
-    margin: 0 0 0 15px;
-}
-
-@media (max-width: 680px) {
-    .site-header-link {
-        display: none;
-    }
+    height: 25px;
 }
 
 .site-mast {
@@ -854,25 +749,17 @@ h6 {
     line-height: 1em;
     border-radius: var(--radius);
     opacity: 0.7;
-    margin: 0 0 0 0.8em;
 }
 
 .site-nav-button:hover {
     text-decoration: none;
-    background-color: #1c2938;
 }
 
 /* Main
 /* ---------------------------------------------------------- */
 
 .site-main {
-    padding: 1.5vw 0;
-}
-
-@media (max-width: 680px) {
-    .site-main {
-        padding: 4vw 0;
-    }
+    padding: 4vw 0;
 }
 
 /* Index
@@ -882,7 +769,7 @@ h6 {
     display: grid;
     justify-content: space-between;
     grid-gap: 30px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 @media (max-width: 980px) {
@@ -897,12 +784,8 @@ h6 {
 }
 
 .post-card {
+    color: inherit;
     text-decoration: none;
-    box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
-        1px 3px 8px rgba(39, 44, 49, 0.03);
-    border-radius: 5px;
-    background-color: #141f2d;
-    color: white;
 }
 
 .post-card:hover {
@@ -913,37 +796,17 @@ h6 {
     margin: 0 0 5px 0;
     font-size: 1.4rem;
     line-height: 1.15em;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 0.5em 1em;
-    display: flex;
-    justify-content: space-between;
-}
-
-.post-content-inner .kg-embed-card {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-}
-
-.post-content-inner iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    color: var(--color-secondary);
 }
 
 .post-card-title {
     margin: 0 0 10px 0;
-    padding: 0 0.8em;
-    color: white;
+    padding: 0;
 }
 
 .post-card-excerpt {
     font-size: 1.6rem;
     line-height: 1.55em;
-    padding: 0 1em 1em 1em;
 }
 
 .post-card-image {
@@ -952,7 +815,6 @@ h6 {
     height: 200px;
     background: var(--color-secondary) no-repeat center center;
     background-size: cover;
-    border-radius: 5px 5px 0 0;
 }
 
 .post-card-footer {
@@ -986,7 +848,6 @@ h6 {
 .post-card-avatar .author-profile-image {
     display: block;
     width: 100%;
-    height: 100%;
     background: var(--color-secondary);
     border-radius: 100%;
     object-fit: cover;
@@ -1097,7 +958,7 @@ h6 {
     display: inline-block;
     padding: 10px 15px;
     border: var(--color-border) 1px solid;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-secondary);
     text-decoration: none;
     font-size: 1.4rem;
     line-height: 1em;
@@ -1110,7 +971,7 @@ h6 {
     width: 100px;
     margin-left: -50px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-secondary);
     font-size: 1.3rem;
 }
 
@@ -1121,7 +982,7 @@ h6 {
     padding: 20px 0 40px 0;
     color: rgba(255, 255, 255, 0.7);
     font-size: 1.3rem;
-    background: #1c2938;
+    background: var(--color-base);
 }
 
 .site-foot-nav {
@@ -1148,15 +1009,148 @@ h6 {
     padding-right: 0;
 }
 
-@media (max-width: 680px) {
-    .site-foot-nav {
-        display: block;
-    }
-    .site-foot-nav-right a {
-        padding: 2px 5px 2px 0;
-    }
-    .site-foot-nav-left {
-        text-align: center;
-        margin: 0 0 1em 0;
-    }
+/* Koenig Styles
+/* ---------------------------------------------------------- */
+
+.kg-bookmark-card {
+    width: 100%;
+    margin-top: 0;
+}
+
+.kg-bookmark-container {
+    display: flex;
+    min-height: 148px;
+    color: var(--color-base);
+    font-family: var(--font-sans-serif);
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.09);
+}
+
+.kg-bookmark-container:hover {
+    color: var(--color-base);
+    text-decoration: none;
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.09);
+}
+
+.kg-bookmark-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.kg-bookmark-title {
+    color: color(var(--color-secondary) l(-30%));
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.kg-bookmark-container:hover .kg-bookmark-title {
+    color: var(--color-primary);
+}
+
+.kg-bookmark-description {
+    display: -webkit-box;
+    overflow-y: hidden;
+    margin-top: 12px;
+    max-height: 48px;
+    color: color(var(--color-secondary) l(-10%));
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    font-weight: 400;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.kg-bookmark-thumbnail {
+    position: relative;
+    min-width: 33%;
+    max-height: 100%;
+}
+
+.kg-bookmark-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+
+    object-fit: cover;
+}
+
+.kg-bookmark-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 14px;
+    color: color(var(--color-secondary) l(-10%));
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.kg-bookmark-icon {
+    margin-right: 8px;
+    width: 22px;
+    height: 22px;
+}
+
+.kg-bookmark-author {
+    line-height: 1.5em;
+}
+
+.kg-bookmark-author:after {
+    content: "•";
+    margin: 0 6px;
+}
+
+.kg-bookmark-publisher {
+    overflow: hidden;
+    max-width: 240px;
+    line-height: 1.5em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Gallery Styles
+/* ---------------------------------------------------------- */
+.kg-gallery-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1040px;
+    width: 100%;
+}
+
+.kg-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kg-gallery-image img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+    margin: 0.75em 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+    margin: 0 0 0 0.75em;
+}
+
+.kg-gallery-card + .kg-image-card.kg-width-wide,
+.kg-gallery-card + .kg-gallery-card,
+.kg-image-card.kg-width-wide + .kg-gallery-card,
+.kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
+    margin: -2.25em 0 3em;
 }
